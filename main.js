@@ -10,3 +10,65 @@ function isPrime(num) {
     if (num % i == 0 || num % (i + 2) == 0) return false;
   return true;
 }
+
+class BaseNumber {
+getNumber() {};
+}
+
+class NumberBucket extends BaseNumber {
+  constructor() {
+  super();
+  this._number = 0;
+  }
+  get number() {
+    return this._number;
+  }
+  set number(arg) {
+    this._number = arg;
+  }
+  getNumber() {
+    return this._number;
+  }
+}
+
+class PrimeBucket extends BaseNumber {
+  constructor() {
+    super();
+    this._number = 0;
+  }
+  get number() {
+    return this._number;
+  }
+  set number(arg) {
+    if(isPrime(arg)) {
+    this._number = arg;
+    }
+  }
+  getNumber() {
+    return this._number;
+  }
+}
+
+let numbers = [];
+
+for (let i = 0; i < dataArr.length; i++) {
+  if(isPrime(dataArr[i])) {
+  let obj = new PrimeBucket();
+  obj.number = dataArr[i];
+  numbers.push(obj);
+  }
+  else{
+    let obj = new NumberBucket();
+  obj.number = dataArr[i];
+  numbers.push(obj);
+  }
+}
+
+console.log(numbers);
+
+for (let i = 0; i < numbers.length; i++) {
+  let objNumber = numbers[i];
+  if(objNumber instanceof BaseNumber) {
+    console.log(objNumber.getNumber())
+  }
+}
