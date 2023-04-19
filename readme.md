@@ -2,6 +2,8 @@ JS Basic exercise:
 
 let data = [8, 79, 14, 94, 33, 31, 2, 74, 46, 72, 75, 40, 5, 1, 48, 81, 99, 4, 43, 68, 90, 23, 97, 10, 55, 11, 20, 50, 70, 83, 47, 25, 86, 30, 60, 96, 76, 22, 67, 77];
 
+<!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends -->
+
 Create a class BaseNumber, that contains:
  - a "getNumber" function, that's empty.
 
