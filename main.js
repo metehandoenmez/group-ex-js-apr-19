@@ -72,3 +72,7 @@ for (let i = 0; i < numbers.length; i++) {
     console.log(objNumber.getNumber())
   }
 }
+
+let obj1 = new PrimeBucket;
+obj1.number = 8;
+console.log(obj1.number);
